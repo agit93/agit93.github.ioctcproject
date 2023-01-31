@@ -25,7 +25,7 @@ body {
 }
 
 .container>* {
-    padding: 1rem;
+    padding: .7rem;
 }
 
 
@@ -105,8 +105,11 @@ nav {
 /*-------footer--------*/
 
 footer {
-    background-color: plum;
+    background-color: #222222;
     grid-area: footer;
+    position: sticky;
+    bottom: 0px;
+    color: white;
 }
 
 
@@ -116,7 +119,7 @@ footer {
     .container {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 0.4fr 0.4fr 2fr 1.2fr 1.2fr 1.2fr 0.6fr;
+        grid-template-rows: 0.6fr 0.6fr 2fr 1.2fr 1.2fr 1.2fr 0.3fr;
         gap: 0px 0px;
         grid-auto-flow: row;
         grid-template-areas: "nav" "side" "main" "cont1" "cont2" "cont3" "footer";
