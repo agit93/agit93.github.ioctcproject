@@ -162,13 +162,26 @@ footer {
 @media only screen and (max-width: 600px) {
     .container {
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: min-content 0.6fr 2fr 1.2fr 1.2fr 1.2fr 1.2fr 0.3fr;
+        grid-template-columns: max-content 1fr;
+        grid-template-rows: 0.5fr 0.6fr 2fr 1.2fr 1.2fr 1.2fr 1.2fr 0.3fr;
         gap: 0px 0px;
         grid-auto-flow: row;
-        grid-template-areas: "nav" "side" "main" "cont1" "cont2" "cont3" "cont4" "footer";
+        grid-template-areas: "logo nav" "side side" "cont1 cont1" "cont2 cont2" "cont3 cont3" "cont4 cont4" "main main" "footer footer";
     }
     .sidebarlist a {
         display: inline-block;
+        min-width: max-content;
+    }
+    .cont1 img {
+        width: 250px;
+    }
+    .cont2 img {
+        width: 250px;
+    }
+    .cont3 img {
+        width: 250px;
+    }
+    .cont4 img {
+        width: 250px;
     }
 }
