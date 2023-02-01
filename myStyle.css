@@ -10,37 +10,68 @@ body {
     text-align: center;
 }
 
+::-webkit-scrollbar {
+    width: 0px;
+}
+
 
 /*------main container--------*/
 
 .container {
     display: grid;
     height: 100vh;
-    grid-template-columns: 0.7fr 1.1fr 1.1fr 1.1fr;
+    grid-template-columns: min-content 1.1fr 1.1fr 1.1fr 1.1fr;
     grid-template-rows: 0.3fr 2fr 1.2fr 0.5fr;
     gap: 0px 0px;
     grid-auto-flow: row;
-    grid-template-areas: "nav nav nav nav" "side main main main" "side cont1 cont2 cont3" "side footer footer footer";
+    grid-template-areas: "logo nav nav nav nav" "side cont1 cont2 cont3 cont4" "side main main main main" "side footer footer footer footer";
     font-family: 'Montserrat', sans-serif;
 }
 
 .container>* {
-    padding: .7rem;
+    padding: .3rem;
 }
 
 
 /*---------sidebar-------*/
 
 .sidebar {
-    background-color: lightgreen;
+    background-color: #333333;
     grid-area: side;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.sidebarlist {
+    list-style-type: none;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebarlist a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: left;
+    padding: .5rem;
+}
+
+.logo {
+    grid-area: logo;
+    background-color: #222222;
+    position: sticky;
+    top: 0;
+    left: 0;
 }
 
 
 /*-------content1--------*/
 
 .cont1 {
-    background-color: dimgray;
+    background-color: #444444;
     grid-area: cont1;
 }
 
@@ -48,7 +79,7 @@ body {
 /*-------content2--------*/
 
 .cont2 {
-    background-color: palegreen;
+    background-color: #444444;
     grid-area: cont2;
 }
 
@@ -56,35 +87,50 @@ body {
 /*-------content3--------*/
 
 .cont3 {
-    background-color: paleturquoise;
+    background-color: #444444;
     grid-area: cont3;
+}
+
+
+/*---------content4--------*/
+
+.cont4 {
+    background-color: #444444;
+    grid-area: cont4;
 }
 
 
 /*-------bodymain--------*/
 
 main {
-    background-color: powderblue;
+    background-color: #444444;
     grid-area: main;
+    color: white;
 }
 
 
 /*-------nav--------*/
 
-nav {
+.navbar {
     background: #222222;
     grid-area: nav;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     color: white;
     position: sticky;
     top: 0px;
 }
 
+.cracktheclue3 {
+    justify-content: center;
+}
+
 .menu {
     display: flex;
     flex-direction: row;
+    padding: .3rem;
 }
 
 .menu>ul {
@@ -107,8 +153,6 @@ nav {
 footer {
     background-color: #222222;
     grid-area: footer;
-    position: sticky;
-    bottom: 0px;
     color: white;
 }
 
@@ -119,9 +163,12 @@ footer {
     .container {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 0.6fr 0.6fr 2fr 1.2fr 1.2fr 1.2fr 0.3fr;
+        grid-template-rows: min-content 0.6fr 2fr 1.2fr 1.2fr 1.2fr 1.2fr 0.3fr;
         gap: 0px 0px;
         grid-auto-flow: row;
-        grid-template-areas: "nav" "side" "main" "cont1" "cont2" "cont3" "footer";
+        grid-template-areas: "nav" "side" "main" "cont1" "cont2" "cont3" "cont4" "footer";
+    }
+    .sidebarlist a {
+        display: inline-block;
     }
 }
