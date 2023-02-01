@@ -21,10 +21,10 @@ body {
     display: grid;
     height: 100vh;
     grid-template-columns: min-content 1.1fr 1.1fr 1.1fr 1.1fr;
-    grid-template-rows: 0.3fr 2fr 1.2fr min-content;
+    grid-template-rows: min-content min-content 2fr min-content;
     gap: 0px 0px;
     grid-auto-flow: row;
-    grid-template-areas: "logo nav nav nav nav" "side cont1 cont2 cont3 cont4" "side main main main main" "side footer footer footer footer";
+    grid-template-areas: "logo nav nav nav nav" "side main main main main" "side cont1 cont2 cont3 cont4" "side footer footer footer footer";
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -108,6 +108,11 @@ main {
     color: white;
 }
 
+main p {
+    font-size: large;
+    padding: 1rem;
+}
+
 
 /*-------nav--------*/
 
@@ -166,7 +171,7 @@ footer {
         grid-template-rows: 0.5fr 0.6fr 2fr 1.2fr 1.2fr 1.2fr 1.2fr min-content;
         gap: 0px 0px;
         grid-auto-flow: row;
-        grid-template-areas: "logo nav" "side side" "cont1 cont1" "cont2 cont2" "cont3 cont3" "cont4 cont4" "main main" "footer footer";
+        grid-template-areas: "logo nav" "side side" "main main" "cont1 cont1" "cont2 cont2" "cont3 cont3" "cont4 cont4" "footer footer";
     }
     .sidebarlist a {
         display: inline-block;
