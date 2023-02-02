@@ -99,6 +99,10 @@ body {
     grid-area: cont4;
 }
 
+.cluenumber {
+    color: white;
+}
+
 
 /*-------bodymain--------*/
 
@@ -110,7 +114,7 @@ main {
 
 main p {
     font-size: large;
-    padding: 1rem;
+    padding: .5rem;
 }
 
 
