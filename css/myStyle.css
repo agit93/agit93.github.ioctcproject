@@ -8,10 +8,12 @@
 body {
     background-color: white;
     text-align: center;
+    overflow: auto;
 }
 
 ::-webkit-scrollbar {
     width: 0px;
+    height: 0px;
 }
 
 
@@ -20,31 +22,14 @@ body {
 .container {
     display: grid;
     height: 100vh;
-    grid-template-columns: max-content 1.1fr 1.1fr 1.1fr 1.1fr;
-    grid-template-rows: max-content min-content 2fr min-content;
+    width: 100vw;
+    grid-template-columns: max-content 1fr 1fr 1fr 1fr;
+    grid-template-rows: max-content minmax(min-content, 1fr) minmax(min-content, 1fr) max-content;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas: "logo nav nav nav nav" "side main main main main" "side cont1 cont2 cont3 cont4" "side footer footer footer footer";
     font-family: 'Montserrat', sans-serif;
 }
-
-.container>* {
-    padding: .3rem;
-}
-
-
-/*.body {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    grid-area: main;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto auto;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas: "main main main main" "cont1 cont2 cont3 cont4";
-}*/
 
 
 /*---------sidebar-------*/
@@ -85,7 +70,9 @@ body {
 .logo {
     grid-area: logo;
     background-color: #222222;
+    justify-self: stretch;
     position: sticky;
+    padding-top: 3%;
     top: 0;
     left: 0;
 }
@@ -96,6 +83,7 @@ body {
 .cont1 {
     background-color: #444444;
     grid-area: cont1;
+    padding-top: 5%;
 }
 
 
@@ -104,6 +92,7 @@ body {
 .cont2 {
     background-color: #444444;
     grid-area: cont2;
+    padding-top: 5%;
 }
 
 
@@ -112,6 +101,7 @@ body {
 .cont3 {
     background-color: #444444;
     grid-area: cont3;
+    padding-top: 5%;
 }
 
 
@@ -120,6 +110,7 @@ body {
 .cont4 {
     background-color: #444444;
     grid-area: cont4;
+    padding-top: 5%;
 }
 
 .cluenumber {
@@ -130,14 +121,19 @@ body {
 /*-------bodymain--------*/
 
 main {
-    background-color: #444444;
     grid-area: main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #444444;
     color: white;
+    border-bottom: 3px solid #555555;
 }
 
 main p {
-    font-size: large;
+    font-size: 1.5em;
     padding: .5rem;
+    justify-items: center;
 }
 
 
@@ -186,6 +182,9 @@ footer {
     background-color: #222222;
     grid-area: footer;
     color: white;
+    position: sticky;
+    bottom: 0;
+    height: fit-content;
 }
 
 
